@@ -7,7 +7,7 @@ import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="min-h-screen bg-gray-800 text-gray-800">
         <ErrorBoundary>
           <Routes>
