@@ -22,7 +22,7 @@ const Works = () => {
       description: "An online payment system for its clients, powered by Paynamics Technologies. This integration enables buyers to settle payments through various channels, including e-wallets like GCash, online banking, and over-the-counter options such as 7-Eleven, SM Bills Payment, and MLhuillier. The system ensures real-time transaction notifications and efficient fund transfers, enhancing the overall customer experience.",
       technologies: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "Paynamics", "Vite"],
       previewImage: cli,
-      websiteUrl: "/cli-payment"
+      websiteUrl: "/portfolio/cli-payment"
     },
     {
       id: 3,
