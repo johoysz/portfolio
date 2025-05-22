@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import enviscape from '../assets/enviscape.png';
+import cli from '../assets/cli.png';
+import chatbot from '../assets/chatbot.png';
+import portfolio from '../assets/portfolio.png';
 
 const Works = () => {
   // Sample projects data - you would replace this with your actual projects
@@ -9,7 +13,7 @@ const Works = () => {
       title: "EnviScape Website (Capstone Project)",
       description: "A virtual tour service provider that enables schools to engage students through interactive and personalized virtual tours, helping them explore campus life, facilities, and community in an immersive way.",
       technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Heroku", "Google Analytics", "CloudPano", "Tawk.to" , "Vite", "PayMongo"],
-      previewImage: "/portfolio/src/assets/enviscape.png", // Website preview placeholder
+      previewImage: enviscape, // Website preview placeholder
       websiteUrl: "https://enviscape-972a5cd3556e.herokuapp.com/"
     },
     {
@@ -17,7 +21,7 @@ const Works = () => {
       title: "CLI Payment System (Internship Project)",
       description: "An online payment system for its clients, powered by Paynamics Technologies. This integration enables buyers to settle payments through various channels, including e-wallets like GCash, online banking, and over-the-counter options such as 7-Eleven, SM Bills Payment, and MLhuillier. The system ensures real-time transaction notifications and efficient fund transfers, enhancing the overall customer experience.",
       technologies: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "Paynamics", "Vite"],
-      previewImage: "/portfolio/src/assets/cli.png",
+      previewImage: cli,
       websiteUrl: "/cli-payment"
     },
     {
@@ -26,7 +30,7 @@ const Works = () => {
       description:
         "An AI-powered chatbot built using Hugging Face models and Flowise AI. This project showcases a visual NLP pipeline and a conversational interface capable of answering queries with contextual understanding. It integrates pre-trained models with a user-friendly frontend for real-time interactions.",
       technologies: ["Flowise", "Hugging Face", "Node.js", "React", "Tailwind CSS"],
-      previewImage: "/portfolio/src/assets/chatbot.png",
+      previewImage: chatbot,
       websiteUrl: "https://johoysz-elai-project.hf.space/chatbot/3c55fad4-e165-4f88-b40c-b0ee59e0930c"
     },
     {
@@ -35,7 +39,7 @@ const Works = () => {
       description:
         "A responsive and user-friendly portfolio website built using React and Tailwind CSS, in a Vite Development. The website showcases my skills, experience, and works, providing a personalized and professional touch.",
       technologies: ["React", "Tailwind CSS", "Vite", "Node.js", "Heroku", "EmailJS", "Flowise"],
-      previewImage: "/portfolio/src/assets/portfolio.png",
+      previewImage: portfolio,
       websiteUrl: "/"
     },
   ];
