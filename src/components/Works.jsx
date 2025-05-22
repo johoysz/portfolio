@@ -4,6 +4,7 @@ import enviscape from '../assets/enviscape.png';
 import cli from '../assets/cli.png';
 import chatbot from '../assets/chatbot.png';
 import portfolio from '../assets/portfolio.png';
+import { Link } from 'react-router-dom';
 
 const Works = () => {
   // Sample projects data - you would replace this with your actual projects
@@ -22,7 +23,7 @@ const Works = () => {
       description: "An online payment system for its clients, powered by Paynamics Technologies. This integration enables buyers to settle payments through various channels, including e-wallets like GCash, online banking, and over-the-counter options such as 7-Eleven, SM Bills Payment, and MLhuillier. The system ensures real-time transaction notifications and efficient fund transfers, enhancing the overall customer experience.",
       technologies: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "Paynamics", "Vite"],
       previewImage: cli,
-      websiteUrl: "/portfolio/cli-payment"
+      websiteUrl: "/cli-payment"
     },
     {
       id: 3,
@@ -103,14 +104,25 @@ const Works = () => {
                 </div>
                 
                 {/* View website link */}
-                <a 
-                    href={currentProject.websiteUrl} 
-                    target="_blank" 
+                {currentProject.websiteUrl.startsWith("/") ? (
+                  <Link
+                    to={currentProject.websiteUrl}
+                    target='_blank'
                     rel="noopener noreferrer"
                     className="absolute -top-6 right-0 bg-transparent text-white hover:text-teal-300 transition-colors flex items-center gap-1 text-sm"
-                >
+                  >
                     View Website <ExternalLink size={14} />
-                </a>
+                  </Link>
+                ) : (
+                  <a
+                    href={currentProject.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute -top-6 right-0 bg-transparent text-white hover:text-teal-300 transition-colors flex items-center gap-1 text-sm"
+                  >
+                    View Website <ExternalLink size={14} />
+                  </a>
+                )}
                 </div>
             </div>
 
