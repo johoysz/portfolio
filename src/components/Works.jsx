@@ -23,7 +23,7 @@ const Works = () => {
       description: "An online payment system for its clients, powered by Paynamics Technologies. This integration enables buyers to settle payments through various channels, including e-wallets like GCash, online banking, and over-the-counter options such as 7-Eleven, SM Bills Payment, and MLhuillier. The system ensures real-time transaction notifications and efficient fund transfers, enhancing the overall customer experience.",
       technologies: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "Paynamics", "Vite"],
       previewImage: cli,
-      websiteUrl: "/cli-payment"
+      websiteUrl: "#/cli-payment"
     },
     {
       id: 3,
@@ -104,11 +104,9 @@ const Works = () => {
                 </div>
                 
                 {/* View website link */}
-                {currentProject.websiteUrl.startsWith("/") ? (
+                {currentProject.websiteUrl.startsWith("#") ? (
                   <Link
-                    to={currentProject.websiteUrl}
-                    target='_blank'
-                    rel="noopener noreferrer"
+                    to={currentProject.websiteUrl.replace("#", "")}
                     className="absolute -top-6 right-0 bg-transparent text-white hover:text-teal-300 transition-colors flex items-center gap-1 text-sm"
                   >
                     View Website <ExternalLink size={14} />
