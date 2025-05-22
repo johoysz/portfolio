@@ -108,13 +108,13 @@ const Works = () => {
                 </div>
                 
                 {/* View website link */}
-                {currentProject.internal === true ? (
-                  <Link
-                    to={currentProject.websiteUrl.replace("#", "")}
+                {currentProject.websiteUrl.includes("#") ? (
+                  <a
+                    href={currentProject.websiteUrl}
                     className="absolute -top-6 right-0 bg-transparent text-white hover:text-teal-300 transition-colors flex items-center gap-1 text-sm"
                   >
                     View Website <ExternalLink size={14} />
-                  </Link>
+                  </a>
                 ) : (
                   <a
                     href={currentProject.websiteUrl}
