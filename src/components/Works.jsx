@@ -5,6 +5,7 @@ import cli from '../assets/cli.png';
 import chatbot from '../assets/chatbot.png';
 import portfolio from '../assets/portfolio.png';
 import { Link } from 'react-router-dom';
+import planner from '../assets/planner.png';
 
 const Works = () => {
   // Sample projects data - you would replace this with your actual projects
@@ -34,7 +35,7 @@ const Works = () => {
         "An AI-powered chatbot built using Hugging Face models and Flowise AI. This project showcases a visual NLP pipeline and a conversational interface capable of answering queries with contextual understanding. It integrates pre-trained models with a user-friendly frontend for real-time interactions.",
       technologies: ["Flowise", "Hugging Face", "Node.js", "React", "Tailwind CSS"],
       previewImage: chatbot,
-      websiteUrl: "https://johoysz-elai-project.hf.space/chatbot/3c55fad4-e165-4f88-b40c-b0ee59e0930c",
+      websiteUrl: "https://johoysz-elai-project.hf.space/chatbot/ff66f6ee-2b20-4d87-926c-489fad1c41b4",
       internal: false,
     },
     {
@@ -47,6 +48,15 @@ const Works = () => {
       websiteUrl: "/",
       internal: false,
     },
+    {
+      id: 5,
+      title: "Powerpuff Personalized Trip Planner",
+      description: "I built this fun and interactive trip planner because, honestly, my friends can never decide on anything 😅. Inspired by the Powerpuff Girls, the app lets everyone vote on the trip details like time, location, and theme. The system well then automatically picks the most popular choices. It’s packed with playful animations, sounds, confirmation emails, and a personalized dashboard to make planning feel like part of the adventure.",
+      technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Inertia.js", "Heroku", "Vite", "Email"],
+      previewImage: planner, // Make sure you have imported `planner` image at the top
+      websiteUrl: "https://personal-trip-planner-13a61fb7e9e0.herokuapp.com/",
+      internal: false,
+    }
   ];
 
   // State to track current project index
@@ -79,7 +89,7 @@ const Works = () => {
             <div className="h-2 w-2 bg-white rounded-full mx-2"></div>
             <div className="h-px w-12 bg-white/50"></div>
             </div>
-            <p className="text-gray-400 italic">I had the pleasure of working with these awesome projects</p>
+            <p className="text-gray-400 italic">Here are some awesome projects I’ve brought to life.</p>
         </div>
 
         {/* Project showcase */}
