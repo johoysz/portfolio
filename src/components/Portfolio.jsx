@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Works from "./Works";
 import ContactForm from "./ContactForm";
+import CV from "../assets/Buangjug_CV.pdf";
 
 const titles = ["Developer", "Editor"];
 
@@ -56,8 +57,7 @@ const Portfolio = () => {
 
         <div className="mb-12">
           <p className="text-lg max-w-xl mx-auto text-gray-300">
-            I’m a graduating IT student passionate about turning ideas into real, working websites. I may be new to the field, but I know how to get things done and keep learning as I go.
-          </p>
+            I’m an IT graduate passionate about turning ideas into real, working websites. I may be early in my career, but I know how to get things done and continuously improve my skills.          </p>
           <br />
         </div>
         <div className="flex justify-center items-center space-x-4">
@@ -71,7 +71,7 @@ const Portfolio = () => {
 
           {/* Download CV */}
           <a
-            href="/files/Buangjug_CV.pdf" // update the filename and path as needed
+            href="CV"
             download="Buangjug_CV.pdf"
             className="flex items-center px-6 py-3 rounded-full bg-white text-gray-800 hover:bg-gray-200 transition-colors"
           >

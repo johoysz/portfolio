@@ -14,7 +14,7 @@ const Works = () => {
       id: 1,
       title: "EnviScape Website (Capstone Project)",
       description: "A virtual tour service provider that enables schools to engage students through interactive and personalized virtual tours, helping them explore campus life, facilities, and community in an immersive way.",
-      technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Heroku", "Google Analytics", "CloudPano", "Tawk.to" , "Vite", "PayMongo"],
+      technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Heroku", "Google Analytics", "CloudPano", "Tawk.to" , "Vite", "PayMongo", "Inertia.js"],
       previewImage: enviscape, // Website preview placeholder
       websiteUrl: "https://enviscape-972a5cd3556e.herokuapp.com/",
       internal: false,
@@ -22,7 +22,7 @@ const Works = () => {
     {
       id: 2,
       title: "CLI Payment System (Internship Project)",
-      description: "An online payment system for its clients, powered by Paynamics Technologies. This integration enables buyers to settle payments through various channels, including e-wallets like GCash, online banking, and over-the-counter options such as 7-Eleven, SM Bills Payment, and MLhuillier. The system ensures real-time transaction notifications and efficient fund transfers, enhancing the overall customer experience.",
+      description: "An online payment system for its clients, powered by Paynamics Technologies. This integration enables buyers to settle payments through various channels, including e-wallets like GCash, and online banking. The system ensures real-time transaction notifications and efficient fund transfers, enhancing the overall customer experience.",
       technologies: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "Paynamics", "Vite"],
       previewImage: cli,
       websiteUrl: "https://pay.cebulandmasters.com/",
@@ -51,7 +51,7 @@ const Works = () => {
     {
       id: 5,
       title: "Powerpuff Personalized Trip Planner",
-      description: "I built this fun and interactive trip planner because, honestly, my friends can never decide on anything 😅. Inspired by the Powerpuff Girls, the app lets everyone vote on the trip details like time, location, and theme. The system well then automatically picks the most popular choices. It’s packed with playful animations, sounds, confirmation emails, and a personalized dashboard to make planning feel like part of the adventure.",
+      description: "I built this fun and interactive trip planner because, honestly, my friends can never decide on anything 😅. Inspired by the Powerpuff Girls, the app lets everyone vote on the trip details like time, location, and theme. The system will automatically picks the most popular choices. It’s packed with playful animations, sounds, confirmation emails, and a personalized dashboard to make planning feel like part of the adventure.",
       technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Inertia.js", "Heroku", "Vite", "Email"],
       previewImage: planner, // Make sure you have imported `planner` image at the top
       websiteUrl: "https://personal-trip-planner-13a61fb7e9e0.herokuapp.com/",

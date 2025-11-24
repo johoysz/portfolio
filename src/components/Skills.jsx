@@ -25,6 +25,10 @@ const Skills = () => {
       { name: "Git Core", level: "Advanced", percentage: 85 },
       { name: "GitHub", level: "Intermediate", percentage: 75 },
     ],
+    testing: [
+      { name: "Vitest", level: "Beginner", percentage: 45 },
+      { name: "React Testing Library", level: "Beginner", percentage: 45 },
+    ],
   };
 
   const designTools = [
@@ -188,6 +192,27 @@ const Skills = () => {
                       <ProgressBar
                         percentage={skill.percentage}
                         color="bg-yellow-500"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Testing */}
+              <div className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-6 mb-6 hover:scale-105">
+                <h3 className="text-white text-xl font-bold mb-4 border-b border-gray-700 pb-2">
+                  Testing
+                </h3>
+                <div className="space-y-5">
+                  {technicalSkills.testing.map((skill, index) => (
+                    <div key={index} className="mb-2">
+                      <div className="flex justify-between mb-1">
+                        <span className="text-white">{skill.name}</span>
+                        <span className="text-gray-400">{skill.level}</span>
+                      </div>
+                      <ProgressBar
+                        percentage={skill.percentage}
+                        color="bg-purple-500"
                       />
                     </div>
                   ))}

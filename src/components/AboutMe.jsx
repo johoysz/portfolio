@@ -1,6 +1,8 @@
 import React from "react";
 import Me from "../assets/me.jpg";
-import { motion, useInView } from "framer-motion";
+import Toga from "../assets/wearingToga.jpg";
+import Tux from "../assets/wearingTux.jpg";
+import { motion as Motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const AboutMe = () => {
@@ -14,7 +16,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section id='about-me' ref={ref}>
+    <section id="about-me" ref={ref}>
       <div className="mt-20 relative min-h-screen bg-gray-900 flex items-center justify-center overflow-hidden">
         {/* Topographic background pattern */}
         <div className="absolute inset-0 w-full h-full z-0">
@@ -54,14 +56,14 @@ const AboutMe = () => {
         {/* Main content container */}
         <div className="container mx-auto px-4 py-16 z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left content */}
-          <motion.div
+          <Motion.div
             className="w-full lg:w-full flex flex-col items-start"
             variants={fadeUp}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <motion.div
+            <Motion.div
               className="border-2 border-white rounded-md px-8 py-4 mb-8"
               variants={fadeUp}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -69,47 +71,49 @@ const AboutMe = () => {
               <h2 className="text-white text-3xl md:text-4xl font-bold">
                 About Me
               </h2>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div
+            <Motion.div
               className="bg-gray-800/80 rounded-3xl p-6 md:p-8 backdrop-blur-sm text-white"
               variants={fadeUp}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <div className="text-teal-400 mb-2">&lt;p&gt;</div>
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold mb-2">Hello!</h3>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  I'm Joy Lyka B. Buangjug, an IT graduating student at the University of Cebu - Main
-                with a strong focus on web development. I specialize in both frontend and backend
-                technologies like React, Laravel, and PostgreSQL. With over four years of
-                experience in photo editing and design using Adobe Photoshop and Lightroom, I bring
-                creative skills to my development projects.
-                <br /><br />
-                I'm passionate about learning, collaboration, and turning ideas into functional,
-                user-friendly applications.
+                  I'm Joy Lyka B. Buangjug, an IT graduate from the University
+                  of Cebu – Main with a strong focus on web development. I
+                  specialize in both frontend and backend technologies such as
+                  React, Laravel, and PostgreSQL. With over four years of
+                  experience in photo editing and design using Adobe Photoshop
+                  and Lightroom, I bring creativity and attention to detail into
+                  my development work.
+                  <br />
+                  <br />
+                  I'm passionate about learning, collaboration, and turning
+                  ideas into functional, user-friendly applications.
                 </p>
               </div>
-              <div className="text-teal-400">&lt;/p&gt;</div>
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
 
           {/* Right content - image */}
-          <motion.div
-            className="w-full lg:w-1/2 flex justify-center lg:justify-end"
+          <Motion.div
+            className="w-full lg:w-1/2 grid grid-cols-1 gap-4"
             variants={fadeUp}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <div className="relative w-full max-w-md">
-              <img
-                src={Me}
-                alt="Joy coding on laptop"
-                className="rounded-xl shadow-lg w-full"
-              />
+            {/* Top single image */}
+            <img src={Me} className="rounded-xl shadow-lg w-full" />
+
+            {/* Bottom two images */}
+            <div className="grid grid-cols-2 gap-4">
+              <img src={Toga} className="rounded-xl shadow-lg w-full" />
+              <img src={Tux} className="rounded-xl shadow-lg w-full" />
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>
