@@ -71,7 +71,7 @@ const Portfolio = () => {
 
           {/* Download CV */}
           <a
-            href="CV"
+            href={CV}
             download="Buangjug_CV.pdf"
             className="flex items-center px-6 py-3 rounded-full bg-white text-gray-800 hover:bg-gray-200 transition-colors"
           >
