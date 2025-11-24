@@ -30,7 +30,7 @@ const Sidebar = () => {
 
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-    
+
     // Initial checks
     handleResize();
     handleScroll();
@@ -41,11 +41,11 @@ const Sidebar = () => {
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  const smoothScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -71,7 +71,8 @@ const Sidebar = () => {
           <rect width="7" height="5" x="3" y="16" rx="1"></rect>
         </svg>
       ),
-      onClick: scrollToTop,
+      onClick: () => smoothScroll("main"),
+      title: "Home",
     },
     { id: "about-me", icon: <User />, title: "About Me" },
     { id: "skills", icon: <Code />, title: "Skills" },
@@ -81,40 +82,23 @@ const Sidebar = () => {
 
   const renderNavItem = (item) => {
     const isActive = activeSection === item.id;
-    
-    if (item.id === "main") {
-      return (
-        <button
-          key={item.id}
-          onClick={item.onClick}
-          className={`p-2 rounded-full ${
-            isActive ? "bg-gray-700" : "hover:bg-gray-700 text-gray-400 cursor-pointer"
-          }`}
-          title="Home"
-        >
-          {item.icon}
-        </button>
-      );
-    }
-    
+
     return (
-      <a
+      <button
         key={item.id}
-        href={`#${item.id}`}
-        onClick={() => isMobile && setIsMobileMenuOpen(false)}
+        onClick={() => smoothScroll(item.id)}
         className={`p-2 rounded-full ${
-          isActive ? "bg-gray-700" : "hover:bg-gray-700"
+          isActive ? "bg-gray-700" : "hover:bg-gray-700 text-gray-400"
         }`}
         title={item.title}
       >
         <div className={isActive ? "text-white" : "text-gray-400 hover:text-white"}>
           {item.icon}
         </div>
-      </a>
+      </button>
     );
   };
 
-  // Mobile hamburger button
   const hamburgerButton = (
     <button
       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -124,7 +108,6 @@ const Sidebar = () => {
     </button>
   );
 
-  // Mobile menu overlay
   const mobileMenu = isMobileMenuOpen && (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center">
       <div className="bg-gray-800 rounded-lg p-6 flex flex-col space-y-6">
@@ -133,7 +116,6 @@ const Sidebar = () => {
     </div>
   );
 
-  // Desktop sidebar
   const desktopSidebar = !isMobile && (
     <div className="fixed left-8 top-1/2 -translate-y-1/2 bg-gray-800 rounded-full p-2 flex flex-col space-y-6 z-30">
       {navItems.map(renderNavItem)}

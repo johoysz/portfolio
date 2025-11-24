@@ -62,21 +62,21 @@ const Portfolio = () => {
         </div>
         <div className="flex justify-center items-center space-x-4">
           {/* Let's Talk - Mail */}
-          <a
-            href="#contact"
+          <button
+            onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
             className="flex items-center px-6 py-3 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-gray-800 transition-colors"
           >
             Let's Talk <Mail className="ml-2 w-5 h-5" />
-          </a>
+          </button>
 
           {/* Download CV */}
-          <a
+          {/* <a
             href={CV}
             download="Buangjug_CV.pdf"
             className="flex items-center px-6 py-3 rounded-full bg-white text-gray-800 hover:bg-gray-200 transition-colors"
           >
             Download CV <Download className="ml-2 w-5 h-5" />
-          </a>
+          </a> */}
         </div>
       </section>
       <AboutMe />
