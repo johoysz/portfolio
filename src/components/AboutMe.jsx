@@ -80,7 +80,7 @@ const AboutMe = () => {
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold mb-2">Hello!</h3>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  I'm Joy Lyka S. Buangjug, an IT graduating student at the University of Cebu - Main
+                  I'm Joy Lyka B. Buangjug, an IT graduating student at the University of Cebu - Main
                 with a strong focus on web development. I specialize in both frontend and backend
                 technologies like React, Laravel, and PostgreSQL. With over four years of
                 experience in photo editing and design using Adobe Photoshop and Lightroom, I bring
