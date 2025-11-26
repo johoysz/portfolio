@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import enviscape from '../assets/enviscape.png';
 import cli from '../assets/cli.png';
-import chatbot from '../assets/chatbot.png';
+// import chatbot from '../assets/chatbot.png';
 import portfolio from '../assets/portfolio.png';
 import { Link } from 'react-router-dom';
 import planner from '../assets/planner.png';
 
 const Works = () => {
-  // Sample projects data - you would replace this with your actual projects
   const projects = [
     {
       id: 1,
@@ -28,16 +27,16 @@ const Works = () => {
       websiteUrl: "https://pay.cebulandmasters.com/",
       internal: true,
     },
-    {
-      id: 3,
-      title: "AI Chatbot with Hugging Face & Flowise",
-      description:
-        "An AI-powered chatbot built using Hugging Face models and Flowise AI. This project showcases a visual NLP pipeline and a conversational interface capable of answering queries with contextual understanding. It integrates pre-trained models with a user-friendly frontend for real-time interactions.",
-      technologies: ["Flowise", "Hugging Face", "Node.js", "React", "Tailwind CSS"],
-      previewImage: chatbot,
-      websiteUrl: "https://johoysz-elai-project.hf.space/chatbot/ff66f6ee-2b20-4d87-926c-489fad1c41b4",
-      internal: false,
-    },
+    // {
+    //   id: 3,
+    //   title: "AI Chatbot with Hugging Face & Flowise",
+    //   description:
+    //     "An AI-powered chatbot built using Hugging Face models and Flowise AI. This project showcases a visual NLP pipeline and a conversational interface capable of answering queries with contextual understanding. It integrates pre-trained models with a user-friendly frontend for real-time interactions.",
+    //   technologies: ["Flowise", "Hugging Face", "Node.js", "React", "Tailwind CSS"],
+    //   previewImage: chatbot,
+    //   websiteUrl: "https://johoysz-elai-project.hf.space/chatbot/ff66f6ee-2b20-4d87-926c-489fad1c41b4",
+    //   internal: false,
+    // },
     {
       id: 4,
       title: "My Portfolio Website",
